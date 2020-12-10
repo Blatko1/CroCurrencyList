@@ -1,6 +1,5 @@
 package sample;
 
-import URLReader.URLReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,12 +8,16 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private Stage window;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+        window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+        window.setTitle("Croatia Currency List");
+        window.setScene(new Scene(root, 586, 400));
+        window.setResizable(false);
+        window.show();
     }
 
 
